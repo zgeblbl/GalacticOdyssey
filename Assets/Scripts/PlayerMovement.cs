@@ -73,7 +73,6 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
 
     public void ApplyWind(float windPower)
     {
-        Debug.Log(windPower);
         rb.velocity += new Vector2(windPower,0f);
     }
 }
