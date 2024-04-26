@@ -22,17 +22,18 @@ public class BushLogic : MonoBehaviour
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
+        Debug.Log(collisionCounter);
         if(collisionCounter == collisionLimit)
         {
             //Oncesinde belki yok olma animasyonu yaparýz
             Destroy(gameObject);
         }
-        if(collision.gameObject.tag == "Player")
+        if (collision.gameObject.CompareTag("Player"))
         {
-            StartCoroutine(collision.gameObject.GetComponent<PlayerHealth>().TakeDamage());
             
+            StartCoroutine(collision.gameObject.GetComponent<PlayerHealth>().TakeDamage());
         }
-        if(collision.gameObject.tag == "Ground")
+        if(collision.gameObject.CompareTag("Ground"))
         {
             collisionCounter++;
             collider.sharedMaterial.bounciness = Random.Range(0.7f,1.2f);

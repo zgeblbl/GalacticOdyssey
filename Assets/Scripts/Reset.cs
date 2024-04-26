@@ -16,7 +16,7 @@ public class Reset : MonoBehaviour
     {
         
     }
-    void Respawn()
+    public void Respawn()
     {
         SceneManager.LoadScene(0);
     }

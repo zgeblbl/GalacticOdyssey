@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
 {
-    private int health;
+    public int health { get; set; }
     private bool invincible;
 
     // Start is called before the first frame update
     void Start()
     {
-        health = 3;
+        health = 1;
         invincible = false;
     }
 
@@ -40,6 +40,7 @@ public class PlayerHealth : MonoBehaviour
     {
         //death animation stuff
         //scene gecis
+        Destroy(gameObject);
         SceneManager.LoadScene(1); 
     }
     
