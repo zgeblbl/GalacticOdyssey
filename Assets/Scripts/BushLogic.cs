@@ -30,7 +30,8 @@ public class BushLogic : MonoBehaviour
         }
         if(collision.gameObject.tag == "Player")
         {
-            //olum ya da health azalt
+            StartCoroutine(collision.gameObject.GetComponent<PlayerHealth>().TakeDamage());
+            
         }
         if(collision.gameObject.tag == "Ground")
         {
