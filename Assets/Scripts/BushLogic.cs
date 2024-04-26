@@ -4,17 +4,19 @@ using UnityEngine;
 
 
 
-public class BushLogic : MonoBehaviour
+public class BushLogic : MonoBehaviour,IWindAffected
 {
     // Start is called before the first frame update
     
     private new CircleCollider2D collider;
     private int collisionCounter;
     private readonly int collisionLimit = 5;
-    
+    private Rigidbody2D rb;
+
     void Start()
     {
         collider = GetComponent<CircleCollider2D>();
+        rb = GetComponent<Rigidbody2D>();
         collider.sharedMaterial.bounciness = 0.7f;
         collider.sharedMaterial.friction = 0.4f;
         collisionCounter = 0;
@@ -42,5 +44,10 @@ public class BushLogic : MonoBehaviour
             collider.sharedMaterial.friction = Random.Range(0.4f, 0.7f);
         }
 
+    }
+
+    public void ApplyWind(float windPower)
+    {
+        rb.AddForce(new Vector2(windPower, 0));
     }
 }
