@@ -7,9 +7,11 @@ using UnityEngine;
 public class BushLogic : MonoBehaviour
 {
     // Start is called before the first frame update
-    private CircleCollider2D collider;
+    
+    private new CircleCollider2D collider;
     private int collisionCounter;
     private readonly int collisionLimit = 5;
+    
     void Start()
     {
         collider = GetComponent<CircleCollider2D>();
