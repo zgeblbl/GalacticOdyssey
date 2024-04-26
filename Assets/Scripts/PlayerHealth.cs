@@ -28,12 +28,16 @@ public class PlayerHealth : MonoBehaviour
         health -= 1;
         if(health == 0)
         {
-            //bakacaz
+            TriggerDeath();
         }
         invincible = true;
         yield return new WaitForSeconds(1);
         invincible = false;
 
+    }
+    private void TriggerDeath()
+    {
+        //gabagool
     }
     
     
