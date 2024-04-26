@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class PlayerMovement : MonoBehaviour
+public class PlayerMovement : MonoBehaviour,IWindAffected
 {
     private float moveSpeed = 5f; 
     private float jumpForce = 10f; 
@@ -69,5 +69,11 @@ public class PlayerMovement : MonoBehaviour
         {
             isGrounded = false;
         }
+    }
+
+    public void ApplyWind(float windPower)
+    {
+        Debug.Log(windPower);
+        rb.velocity += new Vector2(windPower,0f);
     }
 }
