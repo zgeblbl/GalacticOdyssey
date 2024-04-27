@@ -16,7 +16,7 @@ public class BushLogic : MonoBehaviour,IWindAffected
     void Start()
     {
         
-    collider = GetComponent<CircleCollider2D>();
+        collider = GetComponent<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         collider.sharedMaterial.bounciness = 0.7f;
         collider.sharedMaterial.friction = 0.4f;
