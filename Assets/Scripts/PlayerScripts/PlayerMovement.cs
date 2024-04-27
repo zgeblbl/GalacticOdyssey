@@ -6,16 +6,16 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
 {
     public Animator animator;
 
-    private float moveSpeed = 5f; 
-    private float jumpForce = 10f; 
-    private float gravityScale = 3f; 
-    private float descendForce = 10f; 
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpForce = 10f;
+    [SerializeField] float gravityScale = 3f;
+    [SerializeField] float descendForce = 10f; 
 
-    private Rigidbody2D rb; 
-    private bool isGrounded; 
-    private bool isDescending;
+    private Rigidbody2D rb;
+    [SerializeField] bool isGrounded;
+    [SerializeField] bool isDescending;
 
-    private int coinCount = 0;
+    [SerializeField] int coinCount = 0;
 
     void Start()
     {
