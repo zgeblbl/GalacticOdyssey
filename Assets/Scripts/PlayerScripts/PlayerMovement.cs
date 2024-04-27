@@ -44,6 +44,7 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.15f, 1f));
         }
         else if (Input.GetButton("Jump") && rb.velocity.y > 0) // Holding jump button
         {
