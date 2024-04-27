@@ -11,6 +11,7 @@ GameObject:
   - component: {fileID: 7121308050860277362}
   - component: {fileID: 3482735630568097124}
   - component: {fileID: -284383385117947244}
+  - component: {fileID: 8511893222102985554}
   m_Layer: 0
   m_Name: AsteroidParticle
   m_TagString: Untagged
@@ -112,3 +113,15 @@ Rigidbody2D:
   m_SleepingMode: 1
   m_CollisionDetection: 0
   m_Constraints: 0
+--- !u!114 &8511893222102985554
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1544948175918440122}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3a69923dae4df0544889cc1f7b428b58, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
