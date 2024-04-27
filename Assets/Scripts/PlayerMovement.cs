@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class PlayerMovement : MonoBehaviour,IWindAffected
 {
+    public Animator animator;
+
     private float moveSpeed = 5f; 
     private float jumpForce = 10f; 
     private float gravityScale = 3f; 
@@ -23,6 +25,18 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     {
         // Movement
         float horizontalInput = Input.GetAxisRaw("Horizontal");
+
+        animator.SetFloat("isMoving", Mathf.Abs(horizontalInput));
+        if (horizontalInput < 0)
+        {
+            transform.localScale = new Vector3(-1, 1, 1); // Flip character sprite horizontally
+        }
+        // Flip character sprite back to original orientation if moving right
+        else if (horizontalInput > 0)
+        {
+            transform.localScale = new Vector3(1, 1, 1); // Set character sprite to original orientation
+        }
+
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime);
 
