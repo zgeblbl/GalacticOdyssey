@@ -4,10 +4,10 @@ using System.Collections;
 public class AsteroidSpawner : MonoBehaviour
 {
     public GameObject asteroidPrefab;
-    public int minNumAsteroids = 3; // Minimum number of asteroids to spawn
-    public int maxNumAsteroids = 6; // Maximum number of asteroids to spawn
-    public float minSpawnInterval = 1f; // Minimum time between spawns
-    public float maxSpawnInterval = 3f; // Maximum time between spawns
+    public int minNumAsteroids = 3;
+    public int maxNumAsteroids = 6;
+    public float minSpawnInterval = 1f;
+    public float maxSpawnInterval = 3f;
 
     void Start()
     {
