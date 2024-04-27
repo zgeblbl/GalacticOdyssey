@@ -48,9 +48,15 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Explode();
-        playerHealth.StartCoroutine(playerHealth.TakeDamage());
-        print("damage");
+        if (collision != null && collision.gameObject != null)
+        {
+            Explode();
+            if (collision.gameObject.CompareTag("Player"))
+            {
+                playerHealth.StartCoroutine(playerHealth.TakeDamage());
+            }
+        }
+        
 
     }
 
