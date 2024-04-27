@@ -2,7 +2,7 @@ using UnityEngine;
 
 public class Spaceship : MonoBehaviour
 {
-    public float fixedSpeed = 5f;
+    //public float fixedSpeed = 5f;
     public float verticalSpeed = 10f;
     private Rigidbody2D rb;
     public float maxYPosition = 4.5f; // Maximum y position
@@ -18,23 +18,23 @@ public class Spaceship : MonoBehaviour
     {
         //transform.Translate(Vector3.down * fixedSpeed * Time.deltaTime);
 
-        if (Input.GetKey(KeyCode.W))
+        if (Input.GetKey(KeyCode.S))
         {
             
             transform.Translate(Vector3.right * verticalSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.S))
+        if (Input.GetKey(KeyCode.W))
         {
             
             transform.Translate(Vector3.left * verticalSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.D))
         {
-            transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
+            transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.A))
         {
-            transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
+            transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
         }
         float clampedY = Mathf.Clamp(transform.position.y, minYPosition, maxYPosition);
         transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
