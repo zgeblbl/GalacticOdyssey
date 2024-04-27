@@ -41,13 +41,13 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
 
         Vector3 movement = new Vector3(horizontalInput, 0f, 0f);
         transform.Translate(movement * moveSpeed * Time.deltaTime);
+        animator.SetFloat("yVelocity", rb.velocity.y);
 
         // Jumping
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
             isGrounded = false;
-            animator.SetFloat("yVelocity", rb.velocity.y);
             animator.SetBool("isJumping", true);
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.15f, 1f));
         }
