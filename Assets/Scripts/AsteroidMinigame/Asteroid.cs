@@ -8,7 +8,7 @@ public class Asteroid : MonoBehaviour
 
     private Rigidbody2D rb;
     private PlayerHealth playerHealth;
-    public AudioSource explosionEffect;
+    private AudioManager audioManager;
 
     private void Start()
     {
@@ -17,6 +17,7 @@ public class Asteroid : MonoBehaviour
         {
             playerHealth = player.GetComponent<PlayerHealth>();
         }
+        audioManager = FindObjectOfType<AudioManager>();
     }
 
     public void InitializeAsteroid()
@@ -63,10 +64,7 @@ public class Asteroid : MonoBehaviour
 
     void Explode()
     {
-        if (explosionEffect != null && explosionEffect.clip != null)
-        {
-            explosionEffect.Play();
-        }
+        audioManager.ExplosionEffect();
         for (int i = 0; i < numPieces; i++)
         {
 
