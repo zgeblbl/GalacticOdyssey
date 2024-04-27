@@ -16,6 +16,7 @@ public class PlayerHealth : MonoBehaviour
         health = 3;
         invincible = false;
         renderer = GetComponent<Renderer>();
+        
     }
 
     // Update is called once per frame
@@ -52,6 +53,15 @@ public class PlayerHealth : MonoBehaviour
     private void OnParticleCollision(GameObject other)
     {
         StartCoroutine(TakeDamage());
+    }
+    
+    public int GetHealth()
+    {
+        return health;
+    }
+    public bool Getinvi()
+    {
+       return invincible;
     }
 
 

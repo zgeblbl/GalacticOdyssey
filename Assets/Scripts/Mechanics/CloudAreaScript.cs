@@ -29,22 +29,14 @@ public class CloudAreaScript : MonoBehaviour
 
     void Update()
     {
-        
         // Increment the timer
         timer += Time.deltaTime;
-        Debug.Log("Time not under clouds: " + timer);
+        Debug.Log(timer);
         // Check if the character should die
         if (timer >= timeToDie && !underCloud)
         {
             // Call a method to handle the character's death (e.g., respawn, game over, etc.)
-            Die();
-            gameObject.SetActive(false);
+            StartCoroutine(gameObject.GetComponent<PlayerHealth>().TakeDamage());
         }
-    }
-
-    void Die()
-    {
-        // Implement what happens when the character dies (e.g., respawn, game over, etc.)
-        Debug.Log("Character died!");
     }
 }
