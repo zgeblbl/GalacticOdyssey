@@ -53,6 +53,6 @@ public class BushLogic : MonoBehaviour,IWindAffected
 
     public void ApplyWind(float windPower)
     {
-        rb.AddForce(new Vector2(windPower, 0));
+        rb.velocity += new Vector2(windPower, 0f);
     }
 }

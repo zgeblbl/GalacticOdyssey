@@ -10,7 +10,7 @@ public class Wind : MonoBehaviour
     public float windPower;
     void Start()
     {
-        windPower = 0;
+        windPower = 0.05f;
     }
 
     // Update is called once per frame
@@ -21,9 +21,6 @@ public class Wind : MonoBehaviour
         {
             s.ApplyWind(windPower);
         }
-        //foreach (IWindAffected windAffected in FindObjectsOfType<MonoBehaviour>() as IWindAffected[])
-        //{
-        //    windAffected.ApplyWind(windPower);
-        //}
+        
     }
 }
