@@ -4,14 +4,18 @@ public class Asteroid : MonoBehaviour
 {
     public float speed = 5f;
     public GameObject asteroidPiecePrefab;
-    
     public int numPieces = 6;
 
     private Rigidbody2D rb;
+    private PlayerHealth playerHealth;
 
     private void Start()
     {
-        
+        GameObject player = GameObject.FindWithTag("Player");
+        if (player != null)
+        {
+            playerHealth = player.GetComponent<PlayerHealth>();
+        }
     }
 
     public void InitializeAsteroid()
@@ -45,6 +49,9 @@ public class Asteroid : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         Explode();
+        playerHealth.StartCoroutine(playerHealth.TakeDamage());
+        print("damage");
+
     }
 
     void Explode()

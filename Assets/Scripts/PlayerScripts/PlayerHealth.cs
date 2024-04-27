@@ -46,13 +46,14 @@ public class PlayerHealth : MonoBehaviour
     {
         //death animation stuff
         //scene gecis
-        Destroy(gameObject);
+        //Destroy(gameObject);
         SceneManager.LoadScene(1); 
     }
     private void OnParticleCollision(GameObject other)
     {
         StartCoroutine(TakeDamage());
     }
+
 
 
 }

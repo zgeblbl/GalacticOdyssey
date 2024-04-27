@@ -14,23 +14,26 @@ public class CameraFollow : MonoBehaviour
 
     private void Update()
     {
-        // Check if the player's y-position is greater than the minimum height to start following
-        if (target.position.y >= minHeightToFollow)
+        if (target == null)
         {
-            // Smoothly move the camera to the target position
-            Vector3 targetPosition = target.position + offset;
-            transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
-        }
+            // Check if the player's y-position is greater than the minimum height to start following
+            if (target.position.y >= minHeightToFollow)
+            {
+                // Smoothly move the camera to the target position
+                Vector3 targetPosition = target.position + offset;
+                transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
+            }
 
-        // Offset player horizontally based on movement direction
-        if (Input.GetKey(KeyCode.A)) // Player is to the right of the camera
-        {
-            transform.position = Vector3.SmoothDamp(transform.position ,new Vector3(target.position.x - playerOffset, transform.position.y,transform.position.z) , ref velocity, smoothTime);
-        }
-        else if (Input.GetKey(KeyCode.D)) // Player is to the left of the camera
-        {
-            transform.position = Vector3.SmoothDamp(transform.position ,new Vector3(target.position.x + playerOffset, transform.position.y,transform.position.z) , ref velocity, smoothTime);
+            // Offset player horizontally based on movement direction
+            if (Input.GetKey(KeyCode.A)) // Player is to the right of the camera
+            {
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x - playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
+            }
+            else if (Input.GetKey(KeyCode.D)) // Player is to the left of the camera
+            {
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x + playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
 
+            }
         }
     }
 }
