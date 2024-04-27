@@ -11,9 +11,11 @@ public class CameraFollowSpaceship : MonoBehaviour
     public Transform target;
     private float minHeightToFollow = 5f; // Minimum height for camera to start following
     private float playerOffset = 2f; // Offset from the player's position
+    private float leftSideLimit = 0f;
 
     private void Update()
     {
+        
         // Check if the player's y-position is greater than the minimum height to start following
         if (target.position.y >= minHeightToFollow)
         {
@@ -21,16 +23,21 @@ public class CameraFollowSpaceship : MonoBehaviour
             Vector3 targetPosition = target.position + offset;
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
-
-        // Offset player horizontally based on movement direction
-        if (Input.GetKey(KeyCode.A)) // Player is to the right of the camera
+        if (target.position.x > leftSideLimit)
         {
-            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x - playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
-        }
-        else if (Input.GetKey(KeyCode.D)) // Player is to the left of the camera
-        {
-            transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x + playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
+            // Offset player horizontally based on movement direction
+            if (Input.GetKey(KeyCode.A)) // Player is to the right of the camera
+            {
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x - playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
+            }
+            else if (Input.GetKey(KeyCode.D)) // Player is to the left of the camera
+            {
+                print("here");
+                transform.position = Vector3.SmoothDamp(transform.position, new Vector3(target.position.x + playerOffset, transform.position.y, transform.position.z), ref velocity, smoothTime);
 
+            }
         }
+         
+        
     }
 }
