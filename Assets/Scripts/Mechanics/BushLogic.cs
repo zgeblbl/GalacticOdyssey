@@ -7,7 +7,7 @@ using UnityEngine;
 public class BushLogic : MonoBehaviour,IWindAffected
 {
     // Start is called before the first frame update
-    
+    public Animator animator;
     private new CircleCollider2D collider;
     private int collisionCounter;
     private readonly int collisionLimit = 5;
@@ -15,7 +15,8 @@ public class BushLogic : MonoBehaviour,IWindAffected
 
     void Start()
     {
-        collider = GetComponent<CircleCollider2D>();
+        
+    collider = GetComponent<CircleCollider2D>();
         rb = GetComponent<Rigidbody2D>();
         collider.sharedMaterial.bounciness = 0.7f;
         collider.sharedMaterial.friction = 0.4f;
@@ -23,13 +24,18 @@ public class BushLogic : MonoBehaviour,IWindAffected
     }
 
     // Update is called once per frame
-    
+    void DestroyGameObject()
+    {
+        Destroy(gameObject); // Destroy the game object after the delay
+    }
+
     private void OnCollisionEnter2D(Collision2D collision)
     {
         if(collisionCounter == collisionLimit)
         {
             //Oncesinde belki yok olma animasyonu yaparýz
-            Destroy(gameObject);
+            animator.SetBool("destroy",true);
+            Invoke("DestroyGameObject", 0.4f);
         }
         if (collision.gameObject.CompareTag("Player"))
         {
