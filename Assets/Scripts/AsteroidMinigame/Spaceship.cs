@@ -16,20 +16,26 @@ public class Spaceship : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.down * fixedSpeed * Time.deltaTime);
+        //transform.Translate(Vector3.down * fixedSpeed * Time.deltaTime);
 
         if (Input.GetKey(KeyCode.W))
         {
-            // Move the spaceship up
+            
             transform.Translate(Vector3.right * verticalSpeed * Time.deltaTime);
         }
         if (Input.GetKey(KeyCode.S))
         {
-            // Move the spaceship down
+            
             transform.Translate(Vector3.left * verticalSpeed * Time.deltaTime);
         }
-
-        // Clamp the spaceship's position within minYPosition and maxYPosition
+        if (Input.GetKey(KeyCode.D))
+        {
+            transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
+        }
+        if (Input.GetKey(KeyCode.A))
+        {
+            transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
+        }
         float clampedY = Mathf.Clamp(transform.position.y, minYPosition, maxYPosition);
         transform.position = new Vector3(transform.position.x, clampedY, transform.position.z);
     }

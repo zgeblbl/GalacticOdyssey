@@ -4,9 +4,15 @@ public class Asteroid : MonoBehaviour
 {
     public float speed = 5f;
     public GameObject asteroidPiecePrefab;
+    
     public int numPieces = 6;
 
     private Rigidbody2D rb;
+
+    private void Start()
+    {
+        
+    }
 
     public void InitializeAsteroid()
     {
