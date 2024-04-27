@@ -6,14 +6,16 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
 {
     public Animator animator;
 
-    private float moveSpeed = 5f; 
-    private float jumpForce = 10f; 
-    private float gravityScale = 3f; 
-    private float descendForce = 10f; 
+    [SerializeField] float moveSpeed = 5f;
+    [SerializeField] float jumpForce = 10f;
+    [SerializeField] float gravityScale = 3f;
+    [SerializeField] float descendForce = 10f; 
 
-    private Rigidbody2D rb; 
-    private bool isGrounded; 
-    private bool isDescending;
+    private Rigidbody2D rb;
+    [SerializeField] bool isGrounded;
+    [SerializeField] bool isDescending;
+
+    [SerializeField] int coinCount = 0;
 
     void Start()
     {
@@ -26,7 +28,7 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         // Movement
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
-        animator.SetFloat("isMoving", Mathf.Abs(horizontalInput));
+        animator.SetFloat("xVelocity", Mathf.Abs(horizontalInput));
         if (horizontalInput < 0)
         {
             transform.localScale = new Vector3(-1, 1, 1); // Flip character sprite horizontally
@@ -44,6 +46,9 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         if (Input.GetButtonDown("Jump") && isGrounded)
         {
             rb.velocity = new Vector2(rb.velocity.x, jumpForce);
+            isGrounded = false;
+            animator.SetFloat("yVelocity", rb.velocity.y);
+            animator.SetBool("isJumping", true);
             StartCoroutine(Camera.main.GetComponent<CameraShake>().Shake(0.15f, 1f));
         }
         else if (Input.GetButton("Jump") && rb.velocity.y > 0) // Holding jump button
@@ -68,26 +73,23 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         }
     }
 
-    void OnCollisionEnter2D(Collision2D collision)
+    private void OnTriggerEnter2D(Collider2D collision)
     {
         // Check if player is grounded
         if (collision.gameObject.CompareTag("Ground"))
         {
             isGrounded = true;
-        }
-    }
-
-    void OnCollisionExit2D(Collision2D collision)
-    {
-        // Check if player leaves the ground
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
+            animator.SetBool("isJumping", false);
         }
     }
 
     public void ApplyWind(float windPower)
     {
         rb.velocity += new Vector2(windPower,0f);
+    }
+
+    public void coinCollected()
+    {
+        coinCount++;
     }
 }
