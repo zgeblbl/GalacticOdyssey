@@ -16,12 +16,12 @@ public class SpaceshipShooting : MonoBehaviour
 
     void Shoot()
     {
-        Vector3 spawnPosition = transform.position  -transform.up;
+        Vector3 spawnPosition = transform.position + transform.up;
 
         GameObject projectile = Instantiate(projectilePrefab, spawnPosition, Quaternion.identity);
 
         Rigidbody2D rb = projectile.GetComponent<Rigidbody2D>();
-        rb.velocity = -transform.up * projectileSpeed; 
+        rb.velocity = transform.up * projectileSpeed; 
     }
 
 }
