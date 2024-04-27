@@ -8,6 +8,7 @@ public class Asteroid : MonoBehaviour
 
     private Rigidbody2D rb;
     private PlayerHealth playerHealth;
+    public AudioSource explosionEffect;
 
     private void Start()
     {
@@ -62,8 +63,13 @@ public class Asteroid : MonoBehaviour
 
     void Explode()
     {
+        if (explosionEffect != null && explosionEffect.clip != null)
+        {
+            explosionEffect.Play();
+        }
         for (int i = 0; i < numPieces; i++)
         {
+
             GameObject piece = Instantiate(asteroidPiecePrefab, transform.position, Quaternion.identity);
             Rigidbody2D pieceRb = piece.GetComponent<Rigidbody2D>();
             pieceRb.velocity = Random.insideUnitCircle * speed;
