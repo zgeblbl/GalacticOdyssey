@@ -51,7 +51,7 @@ public class Asteroid : MonoBehaviour
         if (collision != null && collision.gameObject != null)
         {
             Explode();
-            if (collision.gameObject.CompareTag("Player"))
+            if (collision.gameObject.CompareTag("Player") && playerHealth != null)
             {
                 playerHealth.StartCoroutine(playerHealth.TakeDamage());
             }

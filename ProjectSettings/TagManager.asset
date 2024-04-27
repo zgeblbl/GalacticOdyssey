@@ -6,6 +6,7 @@ TagManager:
   tags:
   - Ground
   - SafeArea
+  - Asteroid
   layers:
   - Default
   - TransparentFX
