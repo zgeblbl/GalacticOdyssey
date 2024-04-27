@@ -1129,6 +1129,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 828305251080760547, guid: 7ab47ecdff355f64992bbaff75417f4c, type: 3}
   projectileSpeed: 10
+  shootingAudio: {fileID: 470695174}
 --- !u!4 &1791349874
 Transform:
   m_ObjectHideFlags: 0
