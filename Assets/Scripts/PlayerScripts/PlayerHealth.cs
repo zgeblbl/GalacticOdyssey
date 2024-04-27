@@ -1,5 +1,6 @@
 using System.Collections;
 using System.Collections.Generic;
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.SceneManagement;
 
@@ -7,12 +8,14 @@ public class PlayerHealth : MonoBehaviour
 {
     public int health { get; set; }
     private bool invincible;
+    private new Renderer renderer;
 
     // Start is called before the first frame update
     void Start()
     {
         health = 3;
         invincible = false;
+        renderer = GetComponent<Renderer>();
     }
 
     // Update is called once per frame
@@ -32,8 +35,11 @@ public class PlayerHealth : MonoBehaviour
             TriggerDeath();
         }
         invincible = true;
-        yield return new WaitForSeconds(1);
+        Color oldColor = renderer.material.color;
+        renderer.material.color = Color.Lerp(oldColor, Color.gray, 1f); // sonra sileriz
+        yield return new WaitForSeconds(2);
         invincible = false;
+        renderer.material.color = oldColor;
 
     }
     private void TriggerDeath()
@@ -43,6 +49,10 @@ public class PlayerHealth : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(1); 
     }
-    
-    
+    private void OnParticleCollision(GameObject other)
+    {
+        StartCoroutine(TakeDamage());
+    }
+
+
 }

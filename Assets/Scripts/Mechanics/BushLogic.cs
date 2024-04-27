@@ -26,7 +26,6 @@ public class BushLogic : MonoBehaviour,IWindAffected
     
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        Debug.Log(collisionCounter);
         if(collisionCounter == collisionLimit)
         {
             //Oncesinde belki yok olma animasyonu yaparýz
