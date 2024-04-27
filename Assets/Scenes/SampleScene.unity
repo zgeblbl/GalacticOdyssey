@@ -202,8 +202,8 @@ Transform:
   m_GameObject: {fileID: 354688874}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.67, y: 7.52, z: 0}
-  m_LocalScale: {x: 7.315396, y: 0.58809376, z: 1.7425}
+  m_LocalPosition: {x: -1.8923, y: 7.4077, z: 0}
+  m_LocalScale: {x: 2.4752753, y: 0.36350074, z: 1.7425}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 0}
@@ -1727,8 +1727,8 @@ ParticleSystem:
         m_NumAlphaKeys: 2
   UVModule:
     serializedVersion: 2
-    enabled: 0
-    mode: 0
+    enabled: 1
+    mode: 1
     timeMode: 0
     fps: 30
     frameOverTime:
@@ -1786,8 +1786,8 @@ ParticleSystem:
         m_RotationOrder: 4
     startFrame:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0
+      minMaxState: 3
+      scalar: 0.9999
       minScalar: 0
       maxCurve:
         serializedVersion: 2
@@ -1842,11 +1842,13 @@ ParticleSystem:
     tilesY: 1
     animationType: 0
     rowIndex: 0
-    cycles: 1
+    cycles: 0.001
     uvChannelMask: -1
     rowMode: 1
     sprites:
-    - sprite: {fileID: 0}
+    - sprite: {fileID: -369636296, guid: b9cbae623ac32f741ab03901194778b0, type: 3}
+    - sprite: {fileID: -1874700692, guid: b9cbae623ac32f741ab03901194778b0, type: 3}
+    - sprite: {fileID: -1155100305, guid: b9cbae623ac32f741ab03901194778b0, type: 3}
     flipU: 0
     flipV: 0
   VelocityModule:
@@ -4148,7 +4150,7 @@ ParticleSystem:
         m_RotationOrder: 4
     minKillSpeed: 0
     maxKillSpeed: 10000
-    radiusScale: 1
+    radiusScale: 0.02
     collidesWith:
       serializedVersion: 2
       m_Bits: 4294967295
@@ -5125,7 +5127,7 @@ Transform:
   serializedVersion: 2
   m_LocalRotation: {x: -0.7071068, y: -0, z: -0, w: 0.7071068}
   m_LocalPosition: {x: 8.3, y: 19.02, z: 0.43}
-  m_LocalScale: {x: 0.08, y: 0.5, z: 1}
+  m_LocalScale: {x: 0.41, y: 0.5, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 432955643}
@@ -5983,7 +5985,7 @@ CircleCollider2D:
   m_GameObject: {fileID: 1970894507}
   m_Enabled: 1
   m_Density: 1
-  m_Material: {fileID: 6200000, guid: 5b710232f6bd61444b661151638a9d3e, type: 2}
+  m_Material: {fileID: 6200000, guid: 370fd420b5dfaa34d8f47e107c9188ce, type: 2}
   m_IncludeLayers:
     serializedVersion: 2
     m_Bits: 0
