@@ -1199,7 +1199,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5367bd8d24c447e408a300cae35409ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 10
+  moveDistance: 2
   moveSpeed: 2
 --- !u!61 &563526141
 BoxCollider2D:
@@ -1500,7 +1500,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5367bd8d24c447e408a300cae35409ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 10
+  moveDistance: 2
   moveSpeed: 2
 --- !u!1 &644361327
 GameObject:
@@ -1934,7 +1934,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5367bd8d24c447e408a300cae35409ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 10
+  moveDistance: 2
   moveSpeed: 2
 --- !u!61 &810675528
 BoxCollider2D:
@@ -3094,8 +3094,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1193538299}
-  moveSpeed: 6
-  jumpForce: 10
+  moveSpeed: 8
+  jumpForce: 14
   gravityScale: 3
   descendForce: 10
   isGrounded: 0
@@ -16081,7 +16081,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 5367bd8d24c447e408a300cae35409ed, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  moveDistance: 10
+  moveDistance: 2
   moveSpeed: 2
 --- !u!61 &2034549830
 BoxCollider2D:
