@@ -4,5 +4,5 @@ using UnityEngine;
 
 public interface IWindAffected
 {
-    public void ApplyWind(float windPower);
+    public void ApplyWind(float windPower,float n);
 }
