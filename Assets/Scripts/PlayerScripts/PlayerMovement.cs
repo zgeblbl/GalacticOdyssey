@@ -95,9 +95,9 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         }
     }
 
-    public void ApplyWind(float windPower)
+    public void ApplyWind(float yan,float yuk)
     {
-        transform.position += new Vector3(windPower,0f);
+        transform.position += new Vector3(yan,yuk,0f);
     }
 
     public void coinCollected()

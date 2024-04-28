@@ -4,7 +4,7 @@ using UnityEngine;
 
 
 
-public class BushLogic : MonoBehaviour,IWindAffected
+public class BushLogic : MonoBehaviour
 {
     // Start is called before the first frame update
     public Animator animator;
@@ -51,8 +51,5 @@ public class BushLogic : MonoBehaviour,IWindAffected
 
     }
 
-    public void ApplyWind(float windPower)
-    {
-        rb.velocity += new Vector2(windPower, 0f);
-    }
+    
 }
