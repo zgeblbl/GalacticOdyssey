@@ -30,7 +30,6 @@ public class CameraFollow : MonoBehaviour
         else if (Input.GetKey(KeyCode.D)) // Player is to the left of the camera
         {
             transform.position = Vector3.SmoothDamp(transform.position ,new Vector3(target.position.x + playerOffset, transform.position.y,transform.position.z) , ref velocity, smoothTime);
-
         }
     }
 }

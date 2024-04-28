@@ -43,14 +43,14 @@ public class UIHandler : MonoBehaviour
             heart1.SetActive(true);
             heart2.SetActive(true);
             heart3.SetActive(true);
-            Debug.Log("3");
+            
         }
         else if (health == 2)
         {
             heart1.SetActive(true);
             heart2.SetActive(true);
             heart3.SetActive(false);
-            Debug.Log("2");
+            
         }
         else if (health == 1)
         {
