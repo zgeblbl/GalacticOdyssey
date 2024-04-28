@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: 783516ad367bcba4480779a53607328b
+guid: 8cd7d95c61c43f84a9ac180215594ac5
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -110,7 +110,7 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: RainPlanet_Tiles_0
+      name: DesertPlanet_0
       rect:
         serializedVersion: 2
         x: 0
@@ -121,21 +121,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 5}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3bddb4f0545db0b4580b5bc92eb06491
-      internalID: 108316417
+      spriteID: 34a13394822064a449aa6b3fac86328b
+      internalID: -1443715871
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_1
+      name: DesertPlanet_1
       rect:
         serializedVersion: 2
         x: 16
@@ -146,21 +142,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 5}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f0dc15f23b507aa49bad99bcbf9f6e93
-      internalID: -1473671538
+      spriteID: ab152ee3d8344ef43a19fe1b71369ec7
+      internalID: -1803697785
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_2
+      name: DesertPlanet_2
       rect:
         serializedVersion: 2
         x: 32
@@ -171,21 +163,17 @@ TextureImporter:
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
-      physicsShape:
-      - - {x: -8, y: 5}
-        - {x: -8, y: -8}
-        - {x: 8, y: -8}
-        - {x: 8, y: 5}
+      physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: a13cf557f23ce944b8ccc7fc83604d24
-      internalID: 1153112594
+      spriteID: 27804989a6b275848a8b8d0a41b07d74
+      internalID: -482502916
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_3
+      name: DesertPlanet_3
       rect:
         serializedVersion: 2
         x: 48
@@ -199,14 +187,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 0f73dcb90f4444b43969270faccc5303
-      internalID: -589256067
+      spriteID: 2c6b7189b31442d468648c7dc16b37df
+      internalID: 1308997875
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_4
+      name: DesertPlanet_4
       rect:
         serializedVersion: 2
         x: 64
@@ -220,14 +208,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: f7a8ec135df06b447abc91f988bbcc5e
-      internalID: 1470430909
+      spriteID: f2ebddae6d4095d4fb1b1b59c2912a65
+      internalID: 622134298
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_5
+      name: DesertPlanet_5
       rect:
         serializedVersion: 2
         x: 80
@@ -241,14 +229,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 3a2bbcfa712e3f94295f53e43deca4f7
-      internalID: -498826039
+      spriteID: 040a2140cf895b94bb579ac3f4624a3f
+      internalID: 726648324
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_6
+      name: DesertPlanet_6
       rect:
         serializedVersion: 2
         x: 0
@@ -262,14 +250,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 39c325856e95dac44b54a22919b39340
-      internalID: 1567971780
+      spriteID: 6a0621eeda15a244ea365572a23a9060
+      internalID: -100093025
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_7
+      name: DesertPlanet_7
       rect:
         serializedVersion: 2
         x: 16
@@ -283,14 +271,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2fdd061605eefbc4792a0adea11e2981
-      internalID: 1848011931
+      spriteID: 986ea5a06270fd54c91f8c61b679f71b
+      internalID: 1018111428
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_8
+      name: DesertPlanet_8
       rect:
         serializedVersion: 2
         x: 32
@@ -304,14 +292,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: edb0c02731d10994cbbb193972e6d826
-      internalID: 1215115566
+      spriteID: eb385403bde571c4ea1fdd76319b050d
+      internalID: 311547032
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_9
+      name: DesertPlanet_9
       rect:
         serializedVersion: 2
         x: 48
@@ -325,14 +313,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 8f3d70ec66e50074db668343e5a7269d
-      internalID: 686858049
+      spriteID: c32d03db72d3e4843818bec62c0295b2
+      internalID: -1669016066
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_10
+      name: DesertPlanet_10
       rect:
         serializedVersion: 2
         x: 64
@@ -346,14 +334,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 4551e8268c9a897429f5abd57b553c54
-      internalID: 182891905
+      spriteID: ffca7148ae7bf3c409377abf78557be6
+      internalID: 636138966
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_11
+      name: DesertPlanet_11
       rect:
         serializedVersion: 2
         x: 80
@@ -367,14 +355,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 5ccb27230a5c3c846bed915247984199
-      internalID: -558987221
+      spriteID: 0259d54e7078a394e9eb55796015b6c3
+      internalID: -233347929
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_12
+      name: DesertPlanet_12
       rect:
         serializedVersion: 2
         x: 0
@@ -388,14 +376,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 1a8cfc7b1cd84ca4f89db08aacfc7d6a
-      internalID: 184821021
+      spriteID: 2eb23753c5f296c4d8124bf8537a4bdf
+      internalID: -164082254
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_13
+      name: DesertPlanet_13
       rect:
         serializedVersion: 2
         x: 16
@@ -409,14 +397,14 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d096cb7c904ffcc458b87900437040be
-      internalID: -1801002667
+      spriteID: f6288c59fc52fe54b96fcf5622499e1b
+      internalID: -674288231
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: RainPlanet_Tiles_14
+      name: DesertPlanet_14
       rect:
         serializedVersion: 2
         x: 32
@@ -430,8 +418,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 7c76c05ad8c5b204daff51d6ee28acdd
-      internalID: 1987322233
+      spriteID: eacae9621a9ed7f4683b371f04085a14
+      internalID: -1837104279
       vertices: []
       indices: 
       edges: []
@@ -447,21 +435,21 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      RainPlanet_Tiles_0: 108316417
-      RainPlanet_Tiles_1: -1473671538
-      RainPlanet_Tiles_10: 182891905
-      RainPlanet_Tiles_11: -558987221
-      RainPlanet_Tiles_12: 184821021
-      RainPlanet_Tiles_13: -1801002667
-      RainPlanet_Tiles_14: 1987322233
-      RainPlanet_Tiles_2: 1153112594
-      RainPlanet_Tiles_3: -589256067
-      RainPlanet_Tiles_4: 1470430909
-      RainPlanet_Tiles_5: -498826039
-      RainPlanet_Tiles_6: 1567971780
-      RainPlanet_Tiles_7: 1848011931
-      RainPlanet_Tiles_8: 1215115566
-      RainPlanet_Tiles_9: 686858049
+      DesertPlanet_0: -1443715871
+      DesertPlanet_1: -1803697785
+      DesertPlanet_10: 636138966
+      DesertPlanet_11: -233347929
+      DesertPlanet_12: -164082254
+      DesertPlanet_13: -674288231
+      DesertPlanet_14: -1837104279
+      DesertPlanet_2: -482502916
+      DesertPlanet_3: 1308997875
+      DesertPlanet_4: 622134298
+      DesertPlanet_5: 726648324
+      DesertPlanet_6: -100093025
+      DesertPlanet_7: 1018111428
+      DesertPlanet_8: 311547032
+      DesertPlanet_9: -1669016066
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 

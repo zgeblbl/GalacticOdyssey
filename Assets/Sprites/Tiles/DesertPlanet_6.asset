@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 13312, guid: 0000000000000000e000000000000000, type: 0}
   m_Name: DesertPlanet_6
   m_EditorClassIdentifier: 
-  m_Sprite: {fileID: 199045895, guid: 5adee901b33cd5d44b3a667c7fa53c3d, type: 3}
+  m_Sprite: {fileID: -100093025, guid: 8cd7d95c61c43f84a9ac180215594ac5, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_Transform:
     e00: 1
