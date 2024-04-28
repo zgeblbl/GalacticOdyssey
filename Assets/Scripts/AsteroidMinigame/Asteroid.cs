@@ -7,10 +7,12 @@ public class Asteroid : MonoBehaviour
     public GameObject explosionPrefab;
     public float explosionDuration = 0.5f;
     public int numPieces = 6;
+    public int asteroidVal = 10;
 
     private Rigidbody2D rb;
     private PlayerHealth playerHealth;
     private AudioManager audioManager;
+    private UIHandler handler;
 
     int sceneCount;
 
@@ -22,6 +24,7 @@ public class Asteroid : MonoBehaviour
             playerHealth = player.GetComponent<PlayerHealth>();
         }
         audioManager = FindObjectOfType<AudioManager>();
+        handler = FindObjectOfType<UIHandler>();
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
@@ -78,6 +81,7 @@ public class Asteroid : MonoBehaviour
         {
             audioManager.ExplosionEffect();
         }
+        handler.score += asteroidVal;
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, explosionDuration);
         Destroy(gameObject);
