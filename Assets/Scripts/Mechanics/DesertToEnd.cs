@@ -6,9 +6,9 @@ using UnityEngine.SceneManagement;
 public class DesertToEnd : MonoBehaviour
 {
     // Start is called before the first frame update
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter2D(Collision2D other)
     {
-        if (other.gameObject.tag == "SpaceShip")
+        if (other.gameObject.CompareTag("SpaceShip"))
         {
             SceneManager.LoadScene(0);
         }

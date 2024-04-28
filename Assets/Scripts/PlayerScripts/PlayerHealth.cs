@@ -13,6 +13,7 @@ public class PlayerHealth : MonoBehaviour
     public Animator animator;
     public PlayerMovement playerMovement;
     [SerializeField] int sceneCount2;
+    Transform cameraTransform;
 
     // Start is called before the first frame update
 
@@ -23,6 +24,7 @@ public class PlayerHealth : MonoBehaviour
         health = 3;
         invincible = false;
         renderer = GetComponent<Renderer>();
+        cameraTransform = Camera.main.transform;
         
     }
 
@@ -45,6 +47,7 @@ public class PlayerHealth : MonoBehaviour
         if (health == 0)
         {
             TriggerDeath(sceneCount);
+            FocusChar();
         }
         invincible = true;
         Color oldColor = renderer.material.color;
@@ -84,7 +87,11 @@ public class PlayerHealth : MonoBehaviour
         Debug.Log(sceneCount2 + 4);
         SceneManager.LoadScene(sceneCount2 + 4);
     }
-
+    void FocusChar(){
+        Vector3 velocity = Vector3.zero;
+        float smoothTime = 0.25f;
+        cameraTransform.position = Vector3.SmoothDamp(cameraTransform.position, new Vector3(transform.position.x, transform.position.y, cameraTransform.position.z), ref velocity, smoothTime);
+    }
 
 
 }
