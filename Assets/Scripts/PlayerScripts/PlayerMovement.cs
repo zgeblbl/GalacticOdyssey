@@ -7,8 +7,8 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     public Animator animator;
 
     [SerializeField] float moveSpeed = 5f;
-    [SerializeField] float jumpForce = 10f;
-    [SerializeField] float gravityScale = 3f;
+    [SerializeField] float jumpForce = 18f;
+    [SerializeField] float gravityScale = 5f;
     [SerializeField] float descendForce = 10f; 
 
     private Rigidbody2D rb;
@@ -25,7 +25,17 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     }
 
     void Update()
-    { 
+    {   
+        // Grounded check
+        if (rb.velocity.y == 0)
+        {
+            isGrounded = true;
+        }
+        else
+        {
+            isGrounded = false;
+        }
+
        transform.position = new Vector3(transform.position.x, transform.position.y, 0f); // Keep player on the same z-axis
         // Movement
         float horizontalInput = Input.GetAxisRaw("Horizontal");
@@ -72,7 +82,6 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         {
             isDescending = false;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
-            rb.gravityScale = gravityScale * 2;
         }
     }
 
@@ -83,14 +92,6 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         {
             isGrounded = true;
             animator.SetBool("isJumping", false);
-        }
-    }
-
-    private void OnTriggerExit2D(Collider2D collision)
-    {
-        if (collision.gameObject.CompareTag("Ground"))
-        {
-            isGrounded = false;
         }
     }
 
