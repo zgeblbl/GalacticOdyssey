@@ -21,7 +21,7 @@ public class SliderFillController : MonoBehaviour
         targetValue = 0f;
         currentValue = 1f;
         fillDuration = 5f;
-        defillDuration = 60f;
+        defillDuration = 10f;
     }
 
     private void Update()
