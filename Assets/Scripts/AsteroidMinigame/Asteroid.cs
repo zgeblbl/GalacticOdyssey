@@ -3,7 +3,8 @@ using UnityEngine;
 public class Asteroid : MonoBehaviour
 {
     public float speed = 5f;
-    public GameObject asteroidPiecePrefab;
+    public GameObject explosionPrefab;
+    public float explosionDuration = 0.5f;
     public int numPieces = 6;
 
     private Rigidbody2D rb;
@@ -72,13 +73,13 @@ public class Asteroid : MonoBehaviour
         {
             audioManager.ExplosionEffect();
         }
-        
-        for (int i = 0; i < numPieces; i++)
-        {
-            GameObject piece = Instantiate(asteroidPiecePrefab, transform.position, Quaternion.identity);
-            Rigidbody2D pieceRb = piece.GetComponent<Rigidbody2D>();
-            pieceRb.velocity = Random.insideUnitCircle * speed;
-        }
+
+        GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
+
+        // Destroy the explosion particle system after its duration
+        Destroy(explosion, explosionDuration);
+
+        // Destroy the asteroid object
         Destroy(gameObject);
     }
 }

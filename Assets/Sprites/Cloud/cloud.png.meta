@@ -1,5 +1,5 @@
 fileFormatVersion: 2
-guid: b2724a02ca6668b4e84112d78f8b242c
+guid: 9d0b035711752e24991202b06d2a08aa
 TextureImporter:
   internalIDToNameTable: []
   externalObjects: {}
@@ -48,7 +48,7 @@ TextureImporter:
   spriteMeshType: 1
   alignment: 0
   spritePivot: {x: 0.5, y: 0.5}
-  spritePixelsToUnits: 16
+  spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
   spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
@@ -110,13 +110,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: BeginningCutscene_0
+      name: cloud_0
       rect:
         serializedVersion: 2
         x: 0
         y: 0
-        width: 360
-        height: 360
+        width: 95
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -124,20 +124,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d9cf63bdd30acaa4b8253aafdb973393
-      internalID: 352688334
+      spriteID: 7836e4c542edf404f840af8a39d9386c
+      internalID: -2022849569
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: BeginningCutscene_1
+      name: cloud_1
       rect:
         serializedVersion: 2
-        x: 360
+        x: 95
         y: 0
-        width: 360
-        height: 360
+        width: 95
+        height: 39
       alignment: 0
       pivot: {x: 0, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -145,8 +145,50 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 09f94f91d64af2b4a8e05e68b823d3a8
-      internalID: 782472700
+      spriteID: 69d4377ffc4984c4286c218630e56549
+      internalID: -1542760944
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud_2
+      rect:
+        serializedVersion: 2
+        x: 190
+        y: 0
+        width: 95
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a7b07f16fc090064ebe39cc8e84febe6
+      internalID: 1912544437
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: cloud_3
+      rect:
+        serializedVersion: 2
+        x: 285
+        y: 0
+        width: 95
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0c2fb690e3e5200429d3736a62deee36
+      internalID: -1819198526
       vertices: []
       indices: 
       edges: []
@@ -162,8 +204,10 @@ TextureImporter:
     weights: []
     secondaryTextures: []
     nameFileIdTable:
-      BeginningCutscene_0: 352688334
-      BeginningCutscene_1: 782472700
+      cloud_0: -2022849569
+      cloud_1: -1542760944
+      cloud_2: 1912544437
+      cloud_3: -1819198526
   mipmapLimitGroupName: 
   pSDRemoveMatte: 0
   userData: 
