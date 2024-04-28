@@ -2,11 +2,11 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.Events;
+using UnityEngine.SceneManagement;
 
 public class InteractScript : MonoBehaviour
 {
     public bool inRange;
-    [SerializeField] UnityAction action;
     public KeyCode key;
     public TextMesh text;
 
@@ -23,7 +23,7 @@ public class InteractScript : MonoBehaviour
         {
             if (Input.GetKeyDown(key))
             {
-                action.Invoke();
+                SceneManager.LoadScene(4);
             }
         }
     }
