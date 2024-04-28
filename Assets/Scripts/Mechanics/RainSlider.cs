@@ -4,8 +4,8 @@ using UnityEngine.UI;
 public class SliderFillController : MonoBehaviour
 {
     public Slider slider;
-    public float fillDuration = 3f;
-    public float defillDuration = 1f;
+    private float fillDuration;
+    private float defillDuration;
 
     private float targetValue;
     private float currentValue;
@@ -20,6 +20,8 @@ public class SliderFillController : MonoBehaviour
         RainManagerRaining = GameObject.Find("RainManager").GetComponent<Raining>();
         targetValue = 0f;
         currentValue = 1f;
+        fillDuration = 5f;
+        defillDuration = 4f;
     }
 
     private void Update()
