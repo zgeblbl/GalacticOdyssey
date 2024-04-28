@@ -14,6 +14,7 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     private Rigidbody2D rb;
     [SerializeField] bool isGrounded;
     [SerializeField] bool isDescending;
+    [SerializeField] bool isDeath = false;
 
     [SerializeField] int coinCount = 0;
 
@@ -92,5 +93,10 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     public void coinCollected()
     {
         coinCount++;
+    }
+
+    public void setDeath(bool isDead)
+    {
+        isDeath = isDead;
     }
 }

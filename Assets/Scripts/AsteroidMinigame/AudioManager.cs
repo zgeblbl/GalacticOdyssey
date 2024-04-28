@@ -5,9 +5,13 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource explosionEffect;
+    public AudioSource soundtrack;
     void Start()
     {
-        
+        if (soundtrack != null && soundtrack.clip != null)
+        {
+            soundtrack.Play();
+        }
     }
 
     
