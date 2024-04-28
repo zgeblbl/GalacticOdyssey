@@ -56,20 +56,13 @@ public class PlayerHealth : MonoBehaviour
     }
     private void TriggerDeath(int sceneCount)
     {
-
+        
         //death animation stuff
         //scene gecis
         //Destroy(gameObject);
         //playerMovement.setDeath(true);
-        Debug.Log("Death" + sceneCount);
-        if (animator != null)
-        {
-            
-            animator.SetBool("isDeath", true);
-            animator.SetInteger("DeathOrder", SceneManager.GetActiveScene().buildIndex);
-        }
-        
-        
+        if (animator != null) animator.SetBool("isDeath", true);
+        LoadRestartMenu(sceneCount);
         
     }
     private void OnParticleCollision(GameObject other)
