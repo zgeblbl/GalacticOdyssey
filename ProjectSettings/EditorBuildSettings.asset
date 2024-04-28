@@ -18,8 +18,8 @@ EditorBuildSettings:
     path: Assets/Levels/Green_Planet.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
-    path: Assets/Scenes/Green2DesertMinigame.unity
-    guid: dd54dcc0b6691b94ea450f675412e910
+    path: Assets/Levels/DesertMinigame.unity
+    guid: e9ead4093568e8c4e9ce48e660b472a7
   - enabled: 1
     path: Assets/Levels/DesertPlanet.unity
     guid: 5758d569ab917674a98c4dc94330bed8
