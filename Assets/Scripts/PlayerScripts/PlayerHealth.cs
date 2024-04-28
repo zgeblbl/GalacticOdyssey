@@ -70,7 +70,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void OnParticleCollision(GameObject other)
     {
-        StartCoroutine(TakeDamage(0));
+        StartCoroutine(TakeDamage(1));
     }
     
     public int GetHealth()
