@@ -3,6 +3,8 @@ using System.Collections;
 
 public class AsteroidSpawner : MonoBehaviour
 {
+    [SerializeField] int sceneCount; 
+
     public GameObject asteroidPrefab;
     public int minNumAsteroids = 3;
     public int maxNumAsteroids = 6;
@@ -41,7 +43,7 @@ public class AsteroidSpawner : MonoBehaviour
         Asteroid asteroidScript = asteroid.GetComponent<Asteroid>();
         if (asteroidScript != null)
         {
-            asteroidScript.InitializeAsteroid();
+            asteroidScript.InitializeAsteroid(sceneCount);
         }
     }
 

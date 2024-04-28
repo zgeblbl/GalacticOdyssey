@@ -11,6 +11,8 @@ public class Asteroid : MonoBehaviour
     private PlayerHealth playerHealth;
     private AudioManager audioManager;
 
+    int sceneCount;
+
     private void Start()
     {
         GameObject player = GameObject.FindWithTag("Player");
@@ -22,7 +24,7 @@ public class Asteroid : MonoBehaviour
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
-    public void InitializeAsteroid()
+    public void InitializeAsteroid(int count)
     {
         Vector3 spawnPosition = new Vector3(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f), 0f);
         spawnPosition = Camera.main.ViewportToWorldPoint(spawnPosition);
@@ -33,6 +35,8 @@ public class Asteroid : MonoBehaviour
 
         rb = GetComponent<Rigidbody2D>();
         rb.gravityScale = 0f;
+
+        sceneCount = count;
     }
 
     void Update()
@@ -61,7 +65,7 @@ public class Asteroid : MonoBehaviour
                 Explode();
                 if (collision.gameObject.CompareTag("Player") && playerHealth != null)
                 {
-                    playerHealth.StartCoroutine(playerHealth.TakeDamage());
+                    playerHealth.StartCoroutine(playerHealth.TakeDamage(sceneCount + 4));
                 }
             }
         }

@@ -21,6 +21,18 @@ EditorBuildSettings:
     path: Assets/Scenes/Green2DesertMinigame.unity
     guid: dd54dcc0b6691b94ea450f675412e910
   - enabled: 1
-    path: Assets/Scenes/RestartMenu.unity
+    path: Assets/Levels/DesertPlanet.unity
+    guid: 5758d569ab917674a98c4dc94330bed8
+  - enabled: 1
+    path: Assets/Scenes/RestartMenus/RestartMenu.unity
     guid: 43a8dc6f9ee823f4eacf932bd5de546b
+  - enabled: 1
+    path: Assets/Scenes/RestartMenus/RestartMenu2.unity
+    guid: 3997310940ddbc14c817e73f793f1641
+  - enabled: 1
+    path: Assets/Scenes/RestartMenus/RestartMenu3.unity
+    guid: e2b9ff2f9e8237f4490ce1e98edba08d
+  - enabled: 1
+    path: Assets/Scenes/RestartMenus/RestartMenu4.unity
+    guid: 71d4d2f11eb709042937e04ac53b9131
   m_configObjects: {}

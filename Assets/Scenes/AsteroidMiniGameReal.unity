@@ -590,6 +590,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db334b3612b95a6448aef8f2504d04b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCount: 2
   asteroidPrefab: {fileID: 8233246762796860870, guid: 765398a0ceb148d4085735bfc1c802f3, type: 3}
   minNumAsteroids: 3
   maxNumAsteroids: 6
@@ -1108,7 +1109,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  asteroidPiecePrefab: {fileID: 1544948175918440122, guid: 543463bdd5eef8e4eb2055619fac03e2, type: 3}
+  explosionPrefab: {fileID: 0}
+  explosionDuration: 0.5
   numPieces: 4
 --- !u!4 &1232521570
 Transform:
@@ -1239,6 +1241,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 1006904395}
+  soundtrack: {fileID: 0}
 --- !u!4 &1459405032
 Transform:
   m_ObjectHideFlags: 0
@@ -1351,6 +1354,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6e402ce266893ca4bade46c7aa148017, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  animator: {fileID: 1791349876}
+  playerMovement: {fileID: 0}
 --- !u!212 &1791349872
 SpriteRenderer:
   m_ObjectHideFlags: 0

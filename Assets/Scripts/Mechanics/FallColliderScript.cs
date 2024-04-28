@@ -4,13 +4,14 @@ using UnityEngine;
 
 public class FallColliderScript : MonoBehaviour
 {
+    [SerializeField] int currentSceneCount;
    
     private void OnTriggerEnter2D(Collider2D collision)
     {
         if (collision.CompareTag("Player"))
         {
             collision.GetComponent<PlayerHealth>().health = 1;
-            StartCoroutine(collision.GetComponent<PlayerHealth>().TakeDamage());
+            StartCoroutine(collision.GetComponent<PlayerHealth>().TakeDamage(currentSceneCount + 4));
         }
     }
 }

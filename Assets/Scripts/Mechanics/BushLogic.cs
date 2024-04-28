@@ -40,7 +40,7 @@ public class BushLogic : MonoBehaviour,IWindAffected
         if (collision.gameObject.CompareTag("Player"))
         {
             
-            StartCoroutine(collision.gameObject.GetComponent<PlayerHealth>().TakeDamage());
+            StartCoroutine(collision.gameObject.GetComponent<PlayerHealth>().TakeDamage(9));
         }
         if(collision.gameObject.CompareTag("Ground"))
         {

@@ -29,7 +29,7 @@ public class PlayerHealth : MonoBehaviour
     {
         
     }
-    public IEnumerator TakeDamage() 
+    public IEnumerator TakeDamage(int sceneCount) 
     {
         Debug.Log(invincible);
         if (invincible)
@@ -39,7 +39,7 @@ public class PlayerHealth : MonoBehaviour
         health -= 1;
         if(health == 0)
         {
-            TriggerDeath();
+            TriggerDeath(sceneCount);
         }
         invincible = true;
         Color oldColor = renderer.material.color;
@@ -49,19 +49,19 @@ public class PlayerHealth : MonoBehaviour
         renderer.material.color = oldColor;
 
     }
-    private void TriggerDeath()
+    private void TriggerDeath(int sceneCount)
     {
         //death animation stuff
         //scene gecis
         //Destroy(gameObject);
         //playerMovement.setDeath(true);
         animator.SetBool("isDeath", true);
-        SceneManager.LoadScene("RestartMenu", LoadSceneMode.Single);
+        LoadRestartMenu(sceneCount);
         
     }
     private void OnParticleCollision(GameObject other)
     {
-        StartCoroutine(TakeDamage());
+        StartCoroutine(TakeDamage(0));
     }
     
     public int GetHealth()
@@ -73,9 +73,10 @@ public class PlayerHealth : MonoBehaviour
        return invincible;
     }
 
-    void LoadRestartMenu()
+    void LoadRestartMenu(int sceneCount)
     {
-        SceneManager.LoadScene(0);
+        Debug.Log(sceneCount);
+        SceneManager.LoadScene(sceneCount);
     }
 
 

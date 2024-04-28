@@ -5,19 +5,9 @@ using UnityEngine.SceneManagement;
 
 public class Reset : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
-    {
-        
-    }
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+    [SerializeField] int sceneCount;
     public void Respawn()
     {
-        SceneManager.LoadScene(0);
+        SceneManager.LoadScene(sceneCount);
     }
 }
