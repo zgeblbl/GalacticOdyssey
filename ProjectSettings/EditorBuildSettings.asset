@@ -12,7 +12,7 @@ EditorBuildSettings:
     path: Assets/Scenes/FirstGameStart.unity
     guid: a85f69c10a8ad7b4e869d1f1d0204cb7
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
+    path: Assets/Scenes/Green Planet.unity
     guid: 2cda990e2423bbf4892e6590ba056729
   - enabled: 1
     path: Assets/Scenes/RestartMenu.unity
