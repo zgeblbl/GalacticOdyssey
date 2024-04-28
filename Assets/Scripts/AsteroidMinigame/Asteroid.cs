@@ -26,6 +26,8 @@ public class Asteroid : MonoBehaviour
         Vector3 spawnPosition = new Vector3(Random.Range(0.5f, 1f), Random.Range(0.5f, 1f), 0f);
         spawnPosition = Camera.main.ViewportToWorldPoint(spawnPosition);
         spawnPosition.z = 0f;
+        spawnPosition.y = Random.Range(6,10);
+        spawnPosition.x += 10;
         transform.position = spawnPosition;
 
         rb = GetComponent<Rigidbody2D>();
@@ -37,7 +39,7 @@ public class Asteroid : MonoBehaviour
         Vector3 moveDirection = new Vector3(1f, -5f, 0f).normalized;
         transform.Translate(moveDirection * speed * Time.deltaTime);
 
-        if (!IsInView())
+        if (gameObject.transform.position.y < -10)
         {
             Destroy(gameObject);
         }
@@ -46,7 +48,7 @@ public class Asteroid : MonoBehaviour
     bool IsInView()
     {
         Vector3 screenPoint = Camera.main.WorldToViewportPoint(transform.position);
-        return screenPoint.x >= 0 && screenPoint.x <= 1 && screenPoint.y >= 0 && screenPoint.y <= 1;
+        return screenPoint.x >= 0 && screenPoint.x <= 1 && screenPoint.y >= 10 && screenPoint.y <= 1;
     }
 
     private void OnCollisionEnter2D(Collision2D collision)
