@@ -33,7 +33,7 @@ public class Spaceship : MonoBehaviour
 
             transform.Translate(Vector3.up * verticalSpeed * Time.deltaTime);
         }
-        if (Input.GetKey(KeyCode.A) && gameObject.transform.position.x >= -6f)
+        if (Input.GetKey(KeyCode.A) && gameObject.transform.position.x >= -3.5f)
         {
             transform.Translate(Vector3.down * verticalSpeed * Time.deltaTime);
         }
