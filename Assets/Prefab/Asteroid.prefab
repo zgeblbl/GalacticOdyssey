@@ -49,7 +49,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speed: 5
-  asteroidPiecePrefab: {fileID: 1544948175918440122, guid: 543463bdd5eef8e4eb2055619fac03e2, type: 3}
+  explosionPrefab: {fileID: 647642310428629521, guid: c0d44ba5974626a41a479d4a38316a25, type: 3}
+  explosionDuration: 0.5
   numPieces: 4
 --- !u!212 &1851384141551614968
 SpriteRenderer:
