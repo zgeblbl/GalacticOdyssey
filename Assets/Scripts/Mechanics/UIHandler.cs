@@ -2,14 +2,16 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
-    public GameObject heart1;
-    public GameObject heart2;
-    public GameObject heart3;
+    public Image[] hearts;
     public GameObject pauseScreen;
     GameObject player;
+    GameObject interfaceObj;
+    public Sprite[] heartSprites;
+    
     int health;
 
     public void Resume()
@@ -28,10 +30,10 @@ public class UIHandler : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        heart1.SetActive(true);
-        heart2.SetActive(true);
-        heart3.SetActive(true);
+        
         player = GameObject.FindWithTag("Player");
+        interfaceObj = GameObject.FindWithTag("Interface");
+        
     }
 
     // Update is called once per frame
@@ -40,29 +42,27 @@ public class UIHandler : MonoBehaviour
         health = player.GetComponent<PlayerHealth>().GetHealth();
         if (health == 3)
         {
-            heart1.SetActive(true);
-            heart2.SetActive(true);
-            heart3.SetActive(true);
-            
+            hearts[0].sprite = heartSprites[0];
+            hearts[1].sprite = heartSprites[0];
+            hearts[2].sprite = heartSprites[0];
         }
         else if (health == 2)
         {
-            heart1.SetActive(true);
-            heart2.SetActive(true);
-            heart3.SetActive(false);
-            
+            hearts[0].sprite = heartSprites[0];
+            hearts[1].sprite = heartSprites[0];
+            hearts[2].sprite = heartSprites[1];
         }
         else if (health == 1)
         {
-            heart1.SetActive(true);
-            heart2.SetActive(false);
-            heart3.SetActive(false);
+            hearts[0].sprite = heartSprites[0];
+            hearts[1].sprite = heartSprites[1];
+            hearts[2].sprite = heartSprites[1];
         }
         else
         {
-            heart1.SetActive(false);
-            heart2.SetActive(false);
-            heart3.SetActive(false);
+            hearts[0].sprite = heartSprites[1];
+            hearts[1].sprite = heartSprites[1];
+            hearts[2].sprite = heartSprites[1];
         }
         if (Input.GetKeyDown(KeyCode.Escape))
         {
