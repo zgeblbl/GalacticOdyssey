@@ -31,7 +31,9 @@ public class AsteroidSpawner : MonoBehaviour
 
     void SpawnSingleAsteroid()
     {
-        Vector3 spawnViewportPosition = new Vector3(Random.Range(0f, 1f), 1.2f, 0f); 
+        float spawnYPosition = Random.Range(15f, 20f); // Random Y position between 3 and 5
+
+        Vector3 spawnViewportPosition = new Vector3(Random.Range(0f, 1f), spawnYPosition, 0f);
         Vector3 spawnWorldPosition = Camera.main.ViewportToWorldPoint(spawnViewportPosition);
         spawnWorldPosition.z = 0f;
         Quaternion asteroidRotation = Quaternion.Euler(0f, 0f, -45f);
@@ -42,6 +44,7 @@ public class AsteroidSpawner : MonoBehaviour
             asteroidScript.InitializeAsteroid();
         }
     }
+
 
 
 }
