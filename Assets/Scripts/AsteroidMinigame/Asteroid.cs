@@ -78,7 +78,6 @@ public class Asteroid : MonoBehaviour
         {
             audioManager.ExplosionEffect();
         }
-
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
         Destroy(explosion, explosionDuration);
         Destroy(gameObject);
