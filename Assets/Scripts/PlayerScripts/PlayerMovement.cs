@@ -72,6 +72,7 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         {
             isDescending = false;
             rb.velocity = new Vector2(rb.velocity.x, 0f);
+            rb.gravityScale = gravityScale * 2;
         }
     }
 
@@ -82,6 +83,14 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
         {
             isGrounded = true;
             animator.SetBool("isJumping", false);
+        }
+    }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.CompareTag("Ground"))
+        {
+            isGrounded = false;
         }
     }
 
