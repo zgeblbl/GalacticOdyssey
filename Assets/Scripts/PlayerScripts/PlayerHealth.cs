@@ -11,6 +11,7 @@ public class PlayerHealth : MonoBehaviour
     private new Renderer renderer;
     public Animator animator;
     public PlayerMovement playerMovement;
+    [SerializeField] int sceneCount2;
 
     // Start is called before the first frame update
 
@@ -55,7 +56,7 @@ public class PlayerHealth : MonoBehaviour
         //scene gecis
         //Destroy(gameObject);
         //playerMovement.setDeath(true);
-        animator.SetBool("isDeath", true);
+        if (animator != null) animator.SetBool("isDeath", true);
         LoadRestartMenu(sceneCount);
         
     }
@@ -75,8 +76,8 @@ public class PlayerHealth : MonoBehaviour
 
     void LoadRestartMenu(int sceneCount)
     {
-        Debug.Log(sceneCount);
-        SceneManager.LoadScene(sceneCount);
+        Debug.Log(sceneCount2 + 4);
+        SceneManager.LoadScene(sceneCount2 + 4);
     }
 
 

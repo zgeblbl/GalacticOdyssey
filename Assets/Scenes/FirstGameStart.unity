@@ -2416,6 +2416,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1302659823}
   playerMovement: {fileID: 0}
+  sceneCount2: 2
 --- !u!212 &1302659827
 SpriteRenderer:
   m_ObjectHideFlags: 0
