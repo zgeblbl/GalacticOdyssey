@@ -3,7 +3,7 @@ using UnityEngine;
 public class SpaceshipShooting : MonoBehaviour
 {
     public GameObject projectilePrefab;
-    public float projectileSpeed = 10f;
+    public float projectileSpeed = 15f;
     public AudioSource shootingAudio;
 
     void Update()

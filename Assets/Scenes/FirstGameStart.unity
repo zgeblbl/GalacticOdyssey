@@ -1209,6 +1209,7 @@ GameObject:
   - component: {fileID: 1064837327}
   - component: {fileID: 1064837326}
   - component: {fileID: 1064837329}
+  - component: {fileID: 1064837330}
   m_Layer: 0
   m_Name: RainPlanet
   m_TagString: Untagged
@@ -1339,6 +1340,18 @@ CircleCollider2D:
   m_Offset: {x: 0.04642701, y: 0.06963968}
   serializedVersion: 2
   m_Radius: 2.676842
+--- !u!114 &1064837330
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1064837325}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371f7be6f968c0640b55ee640deb6208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1091554354
 GameObject:
   m_ObjectHideFlags: 0
@@ -1833,7 +1846,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectilePrefab: {fileID: 828305251080760547, guid: 7ab47ecdff355f64992bbaff75417f4c, type: 3}
-  projectileSpeed: 10
+  projectileSpeed: 15
   shootingAudio: {fileID: 1155269054}
 --- !u!114 &1302659829
 MonoBehaviour:

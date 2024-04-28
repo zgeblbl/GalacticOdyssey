@@ -33,8 +33,8 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        Vector3 moveDirection = new Vector3(1f, -5f, 0f).normalized;
+        transform.Translate(moveDirection * speed * Time.deltaTime);
 
         if (!IsInView())
         {
@@ -50,24 +50,28 @@ public class Asteroid : MonoBehaviour
 
     private void OnCollisionEnter2D(Collision2D collision)
     {
-        if (collision != null && collision.gameObject != null)
+        if (!collision.gameObject.CompareTag("Asteroid"))
         {
-            Explode();
-            if (collision.gameObject.CompareTag("Player") && playerHealth != null)
+            if (collision != null && collision.gameObject != null)
             {
-                playerHealth.StartCoroutine(playerHealth.TakeDamage());
+                Explode();
+                if (collision.gameObject.CompareTag("Player") && playerHealth != null)
+                {
+                    playerHealth.StartCoroutine(playerHealth.TakeDamage());
+                }
             }
         }
-        
-
     }
 
     void Explode()
     {
-        audioManager.ExplosionEffect();
+        if (audioManager!=null)
+        {
+            audioManager.ExplosionEffect();
+        }
+        
         for (int i = 0; i < numPieces; i++)
         {
-
             GameObject piece = Instantiate(asteroidPiecePrefab, transform.position, Quaternion.identity);
             Rigidbody2D pieceRb = piece.GetComponent<Rigidbody2D>();
             pieceRb.velocity = Random.insideUnitCircle * speed;
