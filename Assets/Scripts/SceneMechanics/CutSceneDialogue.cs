@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using TMPro;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.UI;
 
 public class CutSceneDialogue : MonoBehaviour
 {
@@ -11,6 +12,7 @@ public class CutSceneDialogue : MonoBehaviour
     public string[] lines;
     private int index;
     public float textSpeed;
+    public GameObject image;
 
     // Start is called before the first frame update
     void Start()
@@ -22,7 +24,18 @@ public class CutSceneDialogue : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        
+        if (Input.GetMouseButtonDown(0))
+        {
+            if(textComponent.text == lines[index])
+            {
+                NextLine();
+            } 
+            else
+            {
+                StopAllCoroutines();
+                textComponent.text = lines[index];
+            }
+        }
     }
 
     void StartDialogue()
@@ -43,6 +56,10 @@ public class CutSceneDialogue : MonoBehaviour
     {
         if (index < lines.Length - 1)
         {
+            if(index == 1)
+            {
+                image.SetActive(false);
+            }
             index++;
             textComponent.text += string.Empty;
             StartCoroutine(TypeLine());
