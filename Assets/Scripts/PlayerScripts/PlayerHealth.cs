@@ -4,7 +4,6 @@ using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.UI;
 using UnityEngine.SceneManagement;
-using UnityEngine.UI;
 
 public class PlayerHealth : MonoBehaviour
 {
@@ -13,7 +12,6 @@ public class PlayerHealth : MonoBehaviour
     private new Renderer renderer;
     public Animator animator;
     public PlayerMovement playerMovement;
-<<<<<<< Updated upstream
     public Image[] helmets;
     public Image[] brokenHelmets;
     public Image healthHelmet1;
@@ -22,10 +20,6 @@ public class PlayerHealth : MonoBehaviour
     public Image brokenHelmet1;
     public Image brokenHelmet2;
     public Image brokenHelmet3;
-=======
-    public Image heart1, heart2, heart3;
-    public Sprite broken;
->>>>>>> Stashed changes
 
     // Start is called before the first frame update
 
@@ -38,7 +32,6 @@ public class PlayerHealth : MonoBehaviour
         health = 3;
         invincible = false;
         renderer = GetComponent<Renderer>();
-        
         
     }
 
@@ -58,26 +51,9 @@ public class PlayerHealth : MonoBehaviour
         brokenHelmets[health-1].gameObject.SetActive(true);
 
         health -= 1;
-<<<<<<< Updated upstream
 
 
         if(health == 0)
-=======
-        switch (health)
-        {
-            case 2:
-                Debug.Log(health);
-                heart3.sprite = broken;
-                break;
-            case 1:
-                heart2.sprite = broken;
-                break;
-            case 3:
-                heart1.sprite = broken;
-                break;
-        }
-        if (health == 0)
->>>>>>> Stashed changes
         {
             TriggerDeath(sceneCount);
         }
@@ -91,7 +67,10 @@ public class PlayerHealth : MonoBehaviour
     }
     private void TriggerDeath(int sceneCount)
     {
-        
+        //death animation stuff
+        //scene gecis
+        //Destroy(gameObject);
+        //playerMovement.setDeath(true);
         animator.SetBool("isDeath", true);
         LoadRestartMenu(sceneCount);
         
