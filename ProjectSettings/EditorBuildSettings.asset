@@ -27,6 +27,7 @@ EditorBuildSettings:
     path: Assets/Scenes/RestartMenus/RestartMenu.unity
     guid: 43a8dc6f9ee823f4eacf932bd5de546b
   - enabled: 1
+<<<<<<< Updated upstream
     path: Assets/Scenes/RestartMenus/RestartMenu2.unity
     guid: 3997310940ddbc14c817e73f793f1641
   - enabled: 1
@@ -35,4 +36,8 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/RestartMenus/RestartMenu4.unity
     guid: 71d4d2f11eb709042937e04ac53b9131
+=======
+    path: Assets/Levels/DesertPlanet.unity
+    guid: 5758d569ab917674a98c4dc94330bed8
+>>>>>>> Stashed changes
   m_configObjects: {}
