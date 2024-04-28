@@ -14,7 +14,6 @@ public class CloudAreaScript : MonoBehaviour
         if (other.CompareTag("SafeArea"))
         {
             timer = 0f;
-            Debug.Log("Under cloud!");
             underCloud = true;
         }
     }
@@ -30,8 +29,12 @@ public class CloudAreaScript : MonoBehaviour
     void Update()
     {
         // Increment the timer
-        timer += Time.deltaTime;
-        Debug.Log(timer);
+        bool isinvicible = gameObject.GetComponent<PlayerHealth>().Getinvi();
+        if (isinvicible == false)
+        {
+            timer += Time.deltaTime;
+        }
+        
         // Check if the character should die
         if (timer >= timeToDie && !underCloud)
         {
