@@ -14309,7 +14309,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1193538299}
-  playerMovement: {fileID: 0}
+  playerMovement: {fileID: 1193538294}
   sceneCount2: 3
 --- !u!114 &1193538294
 MonoBehaviour:

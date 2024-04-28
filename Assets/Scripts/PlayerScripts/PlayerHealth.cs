@@ -62,7 +62,7 @@ public class PlayerHealth : MonoBehaviour
         //Destroy(gameObject);
         //playerMovement.setDeath(true);
         if (animator != null) animator.SetBool("isDeath", true);
-        LoadRestartMenu(sceneCount);
+        
         
     }
     private void OnParticleCollision(GameObject other)
