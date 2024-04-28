@@ -1136,8 +1136,8 @@ MonoBehaviour:
   asteroidPrefab: {fileID: 8233246762796860870, guid: 765398a0ceb148d4085735bfc1c802f3, type: 3}
   minNumAsteroids: 3
   maxNumAsteroids: 6
-  minSpawnInterval: 1
-  maxSpawnInterval: 3
+  minSpawnInterval: 0.5
+  maxSpawnInterval: 2
 --- !u!4 &597556322
 Transform:
   m_ObjectHideFlags: 0
