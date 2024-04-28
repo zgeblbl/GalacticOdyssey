@@ -34,7 +34,8 @@ public class AsteroidSpawner : MonoBehaviour
         Vector3 spawnViewportPosition = new Vector3(Random.Range(0f, 1f), 1.2f, 0f); 
         Vector3 spawnWorldPosition = Camera.main.ViewportToWorldPoint(spawnViewportPosition);
         spawnWorldPosition.z = 0f;
-        GameObject asteroid = Instantiate(asteroidPrefab, spawnWorldPosition, Quaternion.identity);
+        Quaternion asteroidRotation = Quaternion.Euler(0f, 0f, -45f);
+        GameObject asteroid = Instantiate(asteroidPrefab, spawnWorldPosition, asteroidRotation);
         Asteroid asteroidScript = asteroid.GetComponent<Asteroid>();
         if (asteroidScript != null)
         {
