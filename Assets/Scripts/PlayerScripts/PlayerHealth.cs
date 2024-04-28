@@ -48,13 +48,21 @@ public class PlayerHealth : MonoBehaviour
         {
             yield break;
         }
-        helmets[health-1].gameObject.SetActive(false);
-        brokenHelmets[health-1].gameObject.SetActive(true);
+
+        Debug.Log(helmets[0]);
+        Debug.Log(health);
+
+        for(int i = health; i < 3; i++)
+        {
+            helmets[i].gameObject.SetActive(false);
+            brokenHelmets[i].gameObject.SetActive(true);
+        }
+        
 
         health -= 1;
+        
 
-
-        if(health == 0)
+        if (health == 0)
         {
             TriggerDeath(sceneCount);
         }
@@ -68,6 +76,7 @@ public class PlayerHealth : MonoBehaviour
     }
     private void TriggerDeath(int sceneCount)
     {
+        
         //death animation stuff
         //scene gecis
         //Destroy(gameObject);
