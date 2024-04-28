@@ -13,8 +13,11 @@ public class PlayerHealth : MonoBehaviour
     public PlayerMovement playerMovement;
 
     // Start is called before the first frame update
+
+
     void Start()
     {
+
         health = 3;
         invincible = false;
         renderer = GetComponent<Renderer>();
@@ -28,6 +31,7 @@ public class PlayerHealth : MonoBehaviour
     }
     public IEnumerator TakeDamage() 
     {
+        Debug.Log(invincible);
         if (invincible)
         {
             yield break;
@@ -50,8 +54,10 @@ public class PlayerHealth : MonoBehaviour
         //death animation stuff
         //scene gecis
         //Destroy(gameObject);
-        playerMovement.setDeath(true);
+        //playerMovement.setDeath(true);
         animator.SetBool("isDeath", true);
+        SceneManager.LoadScene("RestartMenu", LoadSceneMode.Single);
+        
     }
     private void OnParticleCollision(GameObject other)
     {
