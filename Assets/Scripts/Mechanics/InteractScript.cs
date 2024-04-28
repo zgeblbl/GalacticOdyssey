@@ -6,7 +6,7 @@ using UnityEngine.Events;
 public class InteractScript : MonoBehaviour
 {
     public bool inRange;
-    public UnityAction action;
+    [SerializeField] UnityAction action;
     public KeyCode key;
     public TextMesh text;
 
