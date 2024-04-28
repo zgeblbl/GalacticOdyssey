@@ -36,7 +36,7 @@ public class CloudAreaScript : MonoBehaviour
         if (timer >= timeToDie && !underCloud)
         {
             // Call a method to handle the character's death (e.g., respawn, game over, etc.)
-            StartCoroutine(gameObject.GetComponent<PlayerHealth>().TakeDamage(9));
+            StartCoroutine(gameObject.GetComponent<PlayerHealth>().TakeDamage(4));
         }
     }
 }

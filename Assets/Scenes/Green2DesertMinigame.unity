@@ -3445,7 +3445,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   playerMovement: {fileID: 0}
-  sceneCount2: 0
+  sceneCount2: 4
 --- !u!212 &1302659827
 SpriteRenderer:
   m_ObjectHideFlags: 0
