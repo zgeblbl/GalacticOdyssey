@@ -786,6 +786,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   explosionEffect: {fileID: 1508847439}
+  coinEffect: {fileID: 0}
   soundtrack: {fileID: 1508847439}
   musicVolume: 1
 --- !u!82 &1508847439
