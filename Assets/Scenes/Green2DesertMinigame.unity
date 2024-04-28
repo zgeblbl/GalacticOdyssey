@@ -450,7 +450,7 @@ Camera:
   far clip plane: 1000
   field of view: 60
   orthographic: 1
-  orthographic size: 5
+  orthographic size: 6
   m_Depth: -1
   m_CullingMask:
     serializedVersion: 2
@@ -1757,7 +1757,6 @@ GameObject:
   - component: {fileID: 1064837327}
   - component: {fileID: 1064837326}
   - component: {fileID: 1064837329}
-  - component: {fileID: 1064837330}
   m_Layer: 0
   m_Name: RainPlanet
   m_TagString: Untagged
@@ -1847,7 +1846,7 @@ Transform:
   m_GameObject: {fileID: 1064837325}
   serializedVersion: 2
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -23.6, y: 2.0471954, z: 5.312084}
+  m_LocalPosition: {x: -19.56, y: 2.0471954, z: 5.312084}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
@@ -1888,18 +1887,6 @@ CircleCollider2D:
   m_Offset: {x: 0.04642701, y: 0.06963968}
   serializedVersion: 2
   m_Radius: 2.676842
---- !u!114 &1064837330
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 1064837325}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 371f7be6f968c0640b55ee640deb6208, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1 &1091554354
 GameObject:
   m_ObjectHideFlags: 0
@@ -2889,6 +2876,9 @@ GameObject:
   m_Component:
   - component: {fileID: 1736952596}
   - component: {fileID: 1736952595}
+  - component: {fileID: 1736952599}
+  - component: {fileID: 1736952598}
+  - component: {fileID: 1736952597}
   m_Layer: 0
   m_Name: DesertPlanet
   m_TagString: Untagged
@@ -2963,6 +2953,74 @@ Transform:
   m_Children: []
   m_Father: {fileID: 2004012376}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1736952597
+Animator:
+  serializedVersion: 5
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736952594}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: d74a8ab4319af3f4a8c820894a7e6bd2, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_StabilizeFeet: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorStateOnDisable: 0
+  m_WriteDefaultValuesOnDisable: 0
+--- !u!58 &1736952598
+CircleCollider2D:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736952594}
+  m_Enabled: 1
+  m_Density: 1
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_ForceSendLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ForceReceiveLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_ContactCaptureLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_CallbackLayers:
+    serializedVersion: 2
+    m_Bits: 4294967295
+  m_IsTrigger: 1
+  m_UsedByEffector: 0
+  m_UsedByComposite: 0
+  m_Offset: {x: 0.000005887521, y: 0.08161537}
+  serializedVersion: 2
+  m_Radius: 2.685088
+--- !u!114 &1736952599
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1736952594}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 371f7be6f968c0640b55ee640deb6208, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1825600565
 GameObject:
   m_ObjectHideFlags: 0

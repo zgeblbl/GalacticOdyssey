@@ -12,7 +12,7 @@ public class CameraFollowSpaceship : MonoBehaviour
     private float minHeightToFollow = 5f;
     private float playerOffset = 2f;
     private float leftSideLimit = 0f;
-    private float rightSideLimit = 97f;
+    private float rightSideLimit = 100f;
 
     private void Update()
     {

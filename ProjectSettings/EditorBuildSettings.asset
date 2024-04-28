@@ -9,11 +9,17 @@ EditorBuildSettings:
     path: Assets/Scenes/Main Menu.unity
     guid: 4c0e1629a74f3cf40b7b42fcabb40d66
   - enabled: 1
+    path: Assets/Scenes/BeginningCutscene.unity
+    guid: 2fa66bcab972bad408edd25518d086b0
+  - enabled: 1
     path: Assets/Scenes/FirstGameStart.unity
     guid: a85f69c10a8ad7b4e869d1f1d0204cb7
   - enabled: 1
     path: Assets/Levels/Green Planet.unity
     guid: 2cda990e2423bbf4892e6590ba056729
+  - enabled: 1
+    path: Assets/Scenes/Green2DesertMinigame.unity
+    guid: dd54dcc0b6691b94ea450f675412e910
   - enabled: 1
     path: Assets/Scenes/RestartMenu.unity
     guid: 43a8dc6f9ee823f4eacf932bd5de546b
