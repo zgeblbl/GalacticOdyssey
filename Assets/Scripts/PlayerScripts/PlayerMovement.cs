@@ -24,7 +24,8 @@ public class PlayerMovement : MonoBehaviour,IWindAffected
     }
 
     void Update()
-    {
+    { 
+       transform.position = new Vector3(transform.position.x, transform.position.y, 0f); // Keep player on the same z-axis
         // Movement
         float horizontalInput = Input.GetAxisRaw("Horizontal");
 
