@@ -2823,15 +2823,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 1193538299}
   playerMovement: {fileID: 0}
-  sceneCount2: 0
-  helmets: []
-  brokenHelmets: []
-  healthHelmet1: {fileID: 0}
-  healthHelmet2: {fileID: 0}
-  healthHelmet3: {fileID: 0}
-  brokenHelmet1: {fileID: 0}
-  brokenHelmet2: {fileID: 0}
-  brokenHelmet3: {fileID: 0}
+  sceneCount2: 5
 --- !u!114 &1193538294
 MonoBehaviour:
   m_ObjectHideFlags: 0
