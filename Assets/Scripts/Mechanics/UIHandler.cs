@@ -6,8 +6,6 @@ using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
-    public int score = 0;
-
     public Image[] hearts;
     public GameObject pauseScreen;
     GameObject player;
