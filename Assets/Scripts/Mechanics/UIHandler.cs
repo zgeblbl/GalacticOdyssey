@@ -2,10 +2,12 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.SocialPlatforms.Impl;
 using UnityEngine.UI;
 
 public class UIHandler : MonoBehaviour
 {
+    public int score = 0;
     public Image[] hearts;
     public GameObject pauseScreen;
     GameObject player;
