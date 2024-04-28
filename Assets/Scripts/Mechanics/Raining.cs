@@ -11,6 +11,7 @@ public class Raining : MonoBehaviour
     {
         ps = GetComponentInChildren<ParticleSystem>();
         isRaining = false;
+        ps.Stop();
     }
     
 
