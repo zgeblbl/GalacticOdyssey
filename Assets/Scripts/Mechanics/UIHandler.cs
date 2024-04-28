@@ -14,19 +14,6 @@ public class UIHandler : MonoBehaviour
     
     int health;
 
-    public void Resume()
-    {
-        pauseScreen.SetActive(false);
-        Time.timeScale = 1;
-    }
-    public void MainMenu()
-    {
-        Time.timeScale = 1;
-        SceneManager.LoadScene("Main Menu");
-    }
-    public void Options(){
-        SceneManager.LoadScene("Options");
-    }
     // Start is called before the first frame update
     void Start()
     {
@@ -63,19 +50,6 @@ public class UIHandler : MonoBehaviour
             hearts[0].sprite = heartSprites[1];
             hearts[1].sprite = heartSprites[1];
             hearts[2].sprite = heartSprites[1];
-        }
-        if (Input.GetKeyDown(KeyCode.Escape))
-        {
-            if (Time.timeScale == 0)
-            {
-                pauseScreen.SetActive(false);
-                Time.timeScale = 1;
-            }
-            else
-            {
-                pauseScreen.SetActive(true);
-                Time.timeScale = 0;
-            }
         }
     }
 }
