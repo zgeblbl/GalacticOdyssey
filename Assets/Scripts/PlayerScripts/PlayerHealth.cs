@@ -10,6 +10,7 @@ public class PlayerHealth : MonoBehaviour
     private bool invincible;
     private new Renderer renderer;
     public Animator animator;
+    public PlayerMovement playerMovement;
 
     // Start is called before the first frame update
     void Start()
@@ -49,6 +50,7 @@ public class PlayerHealth : MonoBehaviour
         //death animation stuff
         //scene gecis
         //Destroy(gameObject);
+        playerMovement.setDeath(true);
         animator.SetBool("isDeath", true);
     }
     private void OnParticleCollision(GameObject other)
@@ -67,7 +69,7 @@ public class PlayerHealth : MonoBehaviour
 
     void LoadRestartMenu()
     {
-        SceneManager.LoadScene(1);
+        SceneManager.LoadScene(0);
     }
 
 
