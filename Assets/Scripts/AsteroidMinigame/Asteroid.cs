@@ -1,3 +1,4 @@
+using Unity.VisualScripting.FullSerializer;
 using UnityEngine;
 
 public class Asteroid : MonoBehaviour
@@ -79,11 +80,7 @@ public class Asteroid : MonoBehaviour
         }
 
         GameObject explosion = Instantiate(explosionPrefab, transform.position, Quaternion.identity);
-
-        // Destroy the explosion particle system after its duration
         Destroy(explosion, explosionDuration);
-
-        // Destroy the asteroid object
         Destroy(gameObject);
     }
 }
