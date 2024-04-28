@@ -25028,8 +25028,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   animator: {fileID: 1193538299}
-  moveSpeed: 6
-  jumpForce: 10
+  moveSpeed: 8
+  jumpForce: 14
   gravityScale: 3
   descendForce: 10
   isGrounded: 0
