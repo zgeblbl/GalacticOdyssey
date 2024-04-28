@@ -33,8 +33,8 @@ public class Asteroid : MonoBehaviour
 
     void Update()
     {
-        transform.Translate(Vector3.left * speed * Time.deltaTime);
-        transform.Translate(Vector3.down * speed * Time.deltaTime);
+        Vector3 moveDirection = new Vector3(1f, -5f, 0f).normalized;
+        transform.Translate(moveDirection * speed * Time.deltaTime);
 
         if (!IsInView())
         {
@@ -64,10 +64,13 @@ public class Asteroid : MonoBehaviour
 
     void Explode()
     {
-        audioManager.ExplosionEffect();
+        if (audioManager!=null)
+        {
+            audioManager.ExplosionEffect();
+        }
+        
         for (int i = 0; i < numPieces; i++)
         {
-
             GameObject piece = Instantiate(asteroidPiecePrefab, transform.position, Quaternion.identity);
             Rigidbody2D pieceRb = piece.GetComponent<Rigidbody2D>();
             pieceRb.velocity = Random.insideUnitCircle * speed;
