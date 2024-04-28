@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using System.Runtime.CompilerServices;
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 public class PlayerHealth : MonoBehaviour
@@ -12,12 +13,22 @@ public class PlayerHealth : MonoBehaviour
     public Animator animator;
     public PlayerMovement playerMovement;
     [SerializeField] int sceneCount2;
+    public Image[] helmets;
+    public Image[] brokenHelmets;
+    public Image healthHelmet1;
+    public Image healthHelmet2;
+    public Image healthHelmet3;
+    public Image brokenHelmet1;
+    public Image brokenHelmet2;
+    public Image brokenHelmet3;
 
     // Start is called before the first frame update
 
 
     void Start()
     {
+        helmets = new Image[] { healthHelmet1, healthHelmet2, healthHelmet3 };
+        brokenHelmets = new Image[] { brokenHelmet1, brokenHelmet2, brokenHelmet3 };
 
         health = 3;
         invincible = false;
@@ -37,7 +48,12 @@ public class PlayerHealth : MonoBehaviour
         {
             yield break;
         }
+        helmets[health-1].gameObject.SetActive(false);
+        brokenHelmets[health-1].gameObject.SetActive(true);
+
         health -= 1;
+
+
         if(health == 0)
         {
             TriggerDeath(sceneCount);
