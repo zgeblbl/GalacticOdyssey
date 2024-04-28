@@ -886,7 +886,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 200, y: -120}
+  m_AnchoredPosition: {x: 250, y: -120}
   m_SizeDelta: {x: 181.72, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &480491308
@@ -1283,6 +1283,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: db334b3612b95a6448aef8f2504d04b5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneCount: 0
   asteroidPrefab: {fileID: 8233246762796860870, guid: 765398a0ceb148d4085735bfc1c802f3, type: 3}
   minNumAsteroids: 3
   maxNumAsteroids: 6
@@ -2815,6 +2816,15 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   animator: {fileID: 0}
   playerMovement: {fileID: 0}
+  sceneCount2: 0
+  helmets: []
+  brokenHelmets: []
+  healthHelmet1: {fileID: 0}
+  healthHelmet2: {fileID: 0}
+  healthHelmet3: {fileID: 0}
+  brokenHelmet1: {fileID: 0}
+  brokenHelmet2: {fileID: 0}
+  brokenHelmet3: {fileID: 0}
 --- !u!212 &1302659827
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -3472,7 +3482,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 100, y: -120}
+  m_AnchoredPosition: {x: 125, y: -120}
   m_SizeDelta: {x: 181.72, y: 100}
   m_Pivot: {x: 0, y: 0}
 --- !u!114 &1897338218
