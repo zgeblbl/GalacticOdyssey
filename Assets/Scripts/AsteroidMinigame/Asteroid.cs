@@ -18,6 +18,7 @@ public class Asteroid : MonoBehaviour
             playerHealth = player.GetComponent<PlayerHealth>();
         }
         audioManager = FindObjectOfType<AudioManager>();
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
     }
 
     public void InitializeAsteroid()
