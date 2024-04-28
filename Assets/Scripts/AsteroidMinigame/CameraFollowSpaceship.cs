@@ -12,6 +12,7 @@ public class CameraFollowSpaceship : MonoBehaviour
     private float minHeightToFollow = 5f;
     private float playerOffset = 2f;
     private float leftSideLimit = 0f;
+    private float rightSideLimit = 97f;
 
     private void Update()
     {
@@ -21,7 +22,7 @@ public class CameraFollowSpaceship : MonoBehaviour
             Vector3 targetPosition = target.position + offset;
             transform.position = Vector3.SmoothDamp(transform.position, targetPosition, ref velocity, smoothTime);
         }
-        if (target.position.x > leftSideLimit)
+        if (target.position.x > leftSideLimit && target.position.x < rightSideLimit)
         {
             if (Input.GetKey(KeyCode.A)) 
             {
