@@ -5,6 +5,7 @@ using UnityEngine;
 public class AudioManager : MonoBehaviour
 {
     public AudioSource explosionEffect;
+    public AudioSource coinEffect;
     public AudioSource soundtrack;
     public float musicVolume = 1.0f;
     void Start()
@@ -29,6 +30,12 @@ public class AudioManager : MonoBehaviour
         if (explosionEffect != null && explosionEffect.clip != null)
         {
             explosionEffect.Play();
+        }
+    }public void CoinEffect()
+    {
+        if (coinEffect != null && coinEffect.clip != null)
+        {
+            coinEffect.Play();
         }
     }
 
