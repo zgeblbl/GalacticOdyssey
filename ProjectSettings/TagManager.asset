@@ -8,6 +8,7 @@ TagManager:
   - SafeArea
   - Asteroid
   - Interface
+  - SpaceShip
   layers:
   - Default
   - TransparentFX
