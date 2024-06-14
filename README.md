@@ -1,6 +1,6 @@
 # GALACTIC ODYSSEY
 
-![image](https://github.com/zgeblbl/PopTheBalloons/assets/117914215/dc22c7a4-e2d6-4906-959e-10563b484b3f)
+![start](https://github.com/zgeblbl/GalacticOdyssey/assets/117914215/aa7f5d33-9f86-4950-ba77-7d1dfc3b193e)
 
 Welcome to the Galactic Odyssey game repository!
 During Pura Game Jam '24, my team and I developed 'Galactic Odyssey' in just 48 hours using Unity and C#. After the theme “Space” was announced, we brainstormed and refined our ideas, leading to late-night coding sessions to sculpt game mechanics, design levels and perfect details. The game features a robust physics system for responsive spaceship controls and precise collision detection.
